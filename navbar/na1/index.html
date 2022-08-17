@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="" class="logo" >
+        <nav >
+            <ul class="nav_links">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">project</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="" class="cta"><button>Contact</button></a>
+    </header>
+    
+    <div>
+        <label class="toggle">
+            <span class="onoff">OFF</span>
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+    </div>
+</body>
+</html>
+<script>
+    function changeQuantity(cartId, proId, userId,count) {
+        let quantity = parseInt(document.getElementById(proId).innerHTML)
+        count = parseInt(count)
+        $.ajax({
+            url: '/change-product-quantity',
+            data: {
+                user:userId,
+                cart: cartId,
+                product: proId,
+                count: count,
+                quantity: quantity
+            },
+            method: 'post',
+            success: (response) => {
+                if (response.removeProduct) {
+                    alert("Product removed from cart!")
+                    location.reload()
+                } else {
+                    console.log(response)
+                    document.getElementById(proId).innerHTML = quantity + count
+                    document.getElementById('total').innerHTML =response.total
+                }
+            }
+        })
+    }
+    function removeItem(cartId, proId) {
+        $.ajax({
+            url: '/remove-cart-item',
+            data: {
+                cart: cartId,
+                product: proId,
+            },
+            method: 'post',
+            success: (response) => {
+                if (response.removeProduct) {
+                    alert("Product removed from cart!")
+                    location.reload()
+                }
+            }
+        })
+    }
+</script>
