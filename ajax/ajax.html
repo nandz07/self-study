@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <button id="populate">populate data</button>
+
     <table>
         <thead>
             <tr>
@@ -18,7 +20,7 @@
         </thead>
         <tbody id="result_area">
             <tr>
-
+                <td>please wait..</td>
             </tr>
         </tbody>
     </table>
@@ -26,7 +28,11 @@
     <script>
     var xhr = new    XMLHttpRequest();
     xhr.open("get","https://jsonplaceholder.typicode.com/users");
-    xhr.send();
+    //xhr.send();
+
+    document.getElementById("populate").addEventListener("click",function(){
+        xhr.send();
+    })
 
     xhr.onreadystatechange = function(){
         // console.log(xhr.readyState); 
@@ -35,10 +41,12 @@
             if(xhr.status == 200){
                 //alert(xhr.responseText);
                 var result_data = JSON.parse(xhr.responseText);
+                var html_content="";
                 for(i=0;i<result_data.length;++i){
                     var current_record=result_data[i];
+                    html_content=html_content+"<tr><td>"+current_record.id+"</td><td>"+current_record.name+"</td><td>"+current_record.email+"</td><td>"+current_record.username+"</td></tr>"
                 }
-                console.log(result_data);
+                document.getElementById("result_area").innerHTML =html_content
             }else{
                 alert("error");
             }
