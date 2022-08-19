@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    
+     <div class="container">
+        <h1>hello</h1>
+        
+            <h3>register</h3>
+            <label for="">name</label>
+            <input type="text" id="name" placeholder="name" name="name">
+            
+            <label for="">age</label>
+            <input type="text" id="age" name="id">
+
+            <label for="">hai</label>
+            <input type="text" id="hai" name="hai">
+
+            
+
+            <button class="btn btn-success" onclick="savedata()">save</button>
+            
+       
+     </div>
+     <script>
+        function savedata(){
+            var name =$("#name").val();
+            var age =$("#age").val();
+            var hai =$("#hai").val();
+            
+
+            var DataJSON={
+                name:name,
+                age:age,
+                hai:hai
+            };
+            alert(JSON.stringify(DataJSON));
+            $.ajax({
+                method:"post",
+                url:"savedata.php",
+                data:DataJSON
+            })
+
+        }
+     </script>
+     
+</body>
+</html>
