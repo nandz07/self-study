@@ -12,8 +12,45 @@ console.log(c.bold());//ith nokkanda njan oru parrekshanam nadathiyatha(Don't Ca
 p=document.getElementById("title").innerText;//Don't Care(DC)
 //alert(p);
 
+const myImage = document.querySelector('img');
+const head=document.querySelector('h1');
+const body=document.querySelector('body');
+
+myImage.onclick = () => {
+  
+  const mySrc = myImage.getAttribute('src');
+  if (mySrc === 'images/smile.jpg') {
+    document.getElementById("h1").innerHTML="Why Did You Click..!"
+    head.setAttribute('style','color:red')
+    myImage.setAttribute('src','images/angry.jpg');
+    body.setAttribute('style','background-color:black; color:white;')
+
+  } else {
+    myImage.setAttribute('src','images/smile.jpg');
+    document.getElementById("h1").innerHTML="Never Click On Image"
+    head.setAttribute('style','color:black')
+    body.setAttribute('style','background-color:white; color:black;')
+  }
+}
+
+
+// document.querySelector('html').addEventListener('click', function () {
+//   alert('Ouch! Stop poking me!');
+// });
+let myVariable = document.querySelector('html');//will fetch all code of html
+console.log(myVariable)
+ 
+var aa=1//Dc
 function CalcAdd(){//(DC)
-    document.getElementById("title").innerText = "Welcome to JavaScript".bold();//(DC)
+  
+  if(aa==1){
+    document.getElementById("title").innerText = "Welcome to JavaScript";//(DC)
+    aa=0
+  }else{
+    document.getElementById("title").innerText = "title";//(DC)
+    aa=1
+  }
+
 }
 //************Srting******* */
 j="hello    "
@@ -70,3 +107,19 @@ console.log("added value to front of an array => "+ar);
 
 ar.splice(0,2)
 console.log("remove 0-2 indexed numbers => "+ar);
+
+
+//######### Extra #########
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log("valueof x inside the if => "+x);
+  // expected output: 2
+}
+
+console.log("valueof x outside the if => "+x);
+// expected output: 1
+
+//****** Objects **** */
