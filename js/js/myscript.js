@@ -123,3 +123,18 @@ console.log("valueof x outside the if => "+x);
 // expected output: 1
 
 //****** Objects **** */
+
+ob={"name": "nandu","age":24,"mark":75}
+console.log(ob);
+console.log(ob.name);
+console.log(ob.age);
+console.log(ob.mark);
+person = [{name:"appu",age:25},{name:"nandu",age:24}]//this format is called json format
+console.log(person[0])
+console.log(person[1])
+console.log(person[0].name);
+//JavaScript Object Notation (JSON) 
+p=JSON.stringify(person)//convert object to string
+console.log(p)
+o=JSON.parse(p)
+console.log(o)

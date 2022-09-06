@@ -1,2 +1,13 @@
 tintu vloger(Youtube)
 https://www.youtube.com/watch?v=eo8rId_Cwso&list=PLBKJGko2JEdF4irCbI5BdHIEfxEdfMNqA&index=3
+
+video 7 js:
+    ob={"name": "nandu","age":24,"mark":75}
+    console.log(ob);
+    console.log(ob.name);
+    console.log(ob.age);
+    console.log(ob.mark);
+    person = [{name:"appu",age:25},{name:"nandu",age:24}]//json form
+    console.log(person[0])
+    console.log(person[1])
+    console.log(person[0].name);
