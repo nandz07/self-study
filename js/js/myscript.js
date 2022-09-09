@@ -217,3 +217,39 @@ do{
   console.log(i)
   i++
 }while(i<13)
+
+//***for loop */
+ //(initiolalisation;test;update){}
+
+ var ar=["appu","ammu","anu","raju","radha"];
+  console.log(ar.length);
+ for(var i=0;i<ar.length;++i){
+  // console.log("hai")
+  console.log(ar[i]);
+ }
+//  for (let i = 0; i < 5; i++) {
+//   console.log("hai");
+// }
+
+
+//***********Nexted Loop************ */
+for(let i=0;i<10;i++){
+  for(let j=0;j<10;j++){
+    document.write(i+" "+j+"<br>")
+  }
+}
+arr=[10,20,30,40,50,60,70,80,90,100]
+sum=0
+for(i in arr){
+  sum+=arr[i]
+}
+console.log(sum);
+
+arr.forEach(function(value,index){
+  console.log(index+" => "+value);
+  //console.log(value)
+})
+person.forEach(function(value,index){
+  console.log(value.name)
+  console.log(value.age)
+})
