@@ -138,3 +138,45 @@ p=JSON.stringify(person)//convert object to string
 console.log(p)
 o=JSON.parse(p)
 console.log(o)
+
+//***********loop*********** */
+// if(boolian value){
+
+// }else{
+
+// }
+a=100
+if(a<200){
+  console.log(a+" is less than 200");
+} 
+var fruite="apple";
+if(fruite=="banana"){
+  console.log("fruit is banana")
+}else if(fruite== "mango"){
+  console.log("fruit is mango");
+}else{
+  console.log("fruit is "+fruite);
+}
+// function sample(){//Experiment
+//   var data=''+$('#sample').val();
+//   if(data.length<8){
+//     $('#phone_number_span').text(" need valid phone number ..!");
+//     phone_number_status=false;
+//     console.log(data)
+//     //alert("phone"+data.length);
+// }else{
+//   $('#phone_number_span').text(" ");
+//   //alert(name_status);
+//    phone_number_status=true;
+//    console.log(data)
+// }
+// }
+function sample(){
+  var data=''+$('#sample').val();
+  switch(data){
+    case "mango":console.log("mango");
+    break
+    case "orange":console.log("orange");
+    default: console.log("some other fruit");
+  }
+}
