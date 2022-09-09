@@ -180,3 +180,33 @@ function sample(){
     default: console.log("some other fruit");
   }
 }
+function sample1(){
+  var data=''+$('#sample').val();
+  // //console.log(typeof(data))
+  // //i=parseInt(data);
+  // string=""
+  // a=data
+  // i=0
+  // while(i<a){
+  //   //console.log("*");
+  //   string+="*"
+  //   //document.write("*");
+  //   ++i;
+  // }
+  // console.log(string);
+  let n = data; // row or column count
+// defining an empty string
+let string = "";
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 0; j < n - i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < i; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+}
