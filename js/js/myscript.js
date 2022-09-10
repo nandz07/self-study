@@ -327,3 +327,24 @@ for(let ii=0;ii<3;ii++){
 //console.log(ii)//will make error->myscript.js:327 Uncaught ReferenceError: ii is not defined
 //at myscript.js:327:13
 
+//closure
+console.log("closure vd 18")
+
+function abcde(){
+  this.x;
+  this.y;
+  this.set=function(a,b){
+    this.x=a;
+    this.y=b;
+  }
+  this.display=function(){
+    console.log(this.x+this.y)
+  }
+}
+var ob=new abcde();
+ob.set(10,30);
+ob.display();
+
+var ob1 = new abcde();
+ob1.set(100,50);
+ob1.display();
