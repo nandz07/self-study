@@ -235,7 +235,7 @@ do{
 //***********Nexted Loop************ */
 for(let i=0;i<10;i++){
   for(let j=0;j<10;j++){
-    document.write(i+" "+j+"<br>")
+    //document.write(i+" "+j+"<br>")
   }
 }
 arr=[10,20,30,40,50,60,70,80,90,100]
@@ -270,3 +270,41 @@ for(var i=0;i<=10;++i){
   }
   console.log(i)
 }
+
+//functions vd->15
+function printLine(){
+  document.write("****************<br>")
+}
+document.write("<br>welcome to programming<br>")
+printLine();
+document.write("hello<br>");
+printLine();
+
+
+function add(a,b){
+   return a+b
+  //console.log("hai")
+}
+printLine()
+
+
+result = add(10,20);
+document.write(result);
+console.log(result)
+
+// var addition = function(a,b)
+//                 {
+//                   return a+b;
+//                 }
+//console.log(typeof(addition))
+function abc(x,y){
+  console.log(typeof(x))
+  console.log(x(2,3))
+  console.log(y(2,3))
+}
+abc(function(a,b)
+{
+  return a+b;
+},function(a,b){
+return a*b;
+})//function can pass as an argument
