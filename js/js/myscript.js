@@ -308,3 +308,22 @@ abc(function(a,b)
 },function(a,b){
 return a*b;
 })//function can pass as an argument
+
+//*****var ,let ,scope */
+var a=10//scope global either it is var or let
+
+function am(){
+   a=20;
+   var z=30//scope is local
+   console.log("value of local b "+z)
+}
+console.log("value of global a "+a)
+am();
+//console.log("value of local b "+z)//will cause error
+
+for(let ii=0;ii<3;ii++){
+
+}
+//console.log(ii)//will make error->myscript.js:327 Uncaught ReferenceError: ii is not defined
+//at myscript.js:327:13
+
