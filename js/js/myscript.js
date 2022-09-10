@@ -253,3 +253,20 @@ person.forEach(function(value,index){
   console.log(value.name)
   console.log(value.age)
 })
+
+//break will break the loop and start to exicute from end of that loop
+for(var i=0;i<=10;++i){
+  if(i==5){
+    break
+  }
+  console.log(i);
+}//after break start from here
+console.log("break exit")
+
+console.log("Continue")
+for(var i=0;i<=10;++i){
+  if(i<3){
+    continue;
+  }
+  console.log(i)
+}
