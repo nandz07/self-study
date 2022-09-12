@@ -23,6 +23,18 @@
 
     <input type="text" class="a">
     <input type="text" class="a">
+    <select id="op">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <div id="div1">
+        <div id="div2">
+        <input type="text">
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -58,6 +70,26 @@
 // 3
 // : 
 // input.a
+
+//style from js side
+nameQuery=document.querySelectorAll("#name");
+console.log(nameQuery);
+
+newQuery=document.querySelectorAll("input");
+console.log(newQuery[0].value);
+
+console.log(newQuery);
+
+classAQuery=document.querySelectorAll("input.a");
+console.log(classAQuery);
+
+selectQuery=document.querySelectorAll("select option");
+console.log(selectQuery);
+
+divQuery=document.querySelectorAll("#div1 > #div2 > input");
+console.log(divQuery);
+
+
 
     </script>
 </body>
