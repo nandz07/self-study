@@ -126,12 +126,8 @@ input.error, textarea.error {
     -->
     <script>
         $(document).ready(function() {
-            $(document).on("click", '#add', function(e) { // *******
-            e.preventDefault(); 
-            
+          var form 	=  $( "#basic-form" );
   $("#basic-form").validate({
-    errorClass: "error fail-alert",
-    validClass: "valid success-alert",
     rules: {
       name : {
         required: true,
@@ -172,11 +168,11 @@ input.error, textarea.error {
         required: "People with age over 50 have to enter their weight",
         number: "Please enter your weight as a numerical value"
       }
+    },
+    submitHandler: function(form) {
+      alert("hai");
     }
   });
-});
-
-alert("hai");
 });
     </script>
 </body>
