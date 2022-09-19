@@ -11,3 +11,25 @@ video 7 js:
     console.log(person[0])
     console.log(person[1])
     console.log(person[0].name);
+
+    video 22 -> cart span
+    
+    **********video 23*******
+Math.sqrt(25) 
+5
+Math.round(10.5)
+11
+Math.round(10.4)
+10
+Math.ceil(0.2)
+1
+Math.floor(0.9)
+0
+Math.PI
+3.141592653589793
+Math.max(20,10,30,50,8,)
+50
+Math.pow(2,3)
+8
+Math.pow(5,2)
+25
