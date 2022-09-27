@@ -42,9 +42,10 @@ console.log(myVariable)
  
 var aa=1//Dc
 function CalcAdd(){//(DC)
+  var a ="javascript";
   
   if(aa==1){
-    document.getElementById("title").innerText = "Welcome to JavaScript";//(DC)
+    document.getElementById("title").innerText =a;//(DC)
     aa=0
   }else{
     document.getElementById("title").innerText = "title";//(DC)
@@ -53,12 +54,12 @@ function CalcAdd(){//(DC)
 
 }
 //************Srting******* */
-j="hello    "
+j="hello      "
 console.log("before trim "+j.length);
 console.log("after trim "+j.trim().length);
 
 str="welcome to js";
-ss=str.substr(0,3);
+ss=str.substr(0,3);//PRINT FROM 0 TO 3
 console.log("sub string "+ss);
 
 str1="apple is my fav"
@@ -67,12 +68,13 @@ str1=str1.replace("apple","orange")
 console.log("after replace ->"+str1)
 
 str2="india is my country"
-console.log(str2.startsWith("india"));
+console.log(str2.startsWith("india"));//CHECK WETHER START WITH INDIA ->IF YES->TRUE,ELSE FALSE
 console.log(str2.startsWith("america"));
 //trimLeft(),trimRight()
 
-str3="appu,ammu,anu";
-str3=str3.split(",");
+str3="appu.ammu.anu";//IMPORTANT
+console.log(str3);
+str3=str3.split(".");//stored in array
 console.log("splited str3 => "+str3);
 str4=str3.join(",")
 console.log("join wit ',' => "+str4)
@@ -105,8 +107,8 @@ console.log("delete vale from front => "+ar)
 ar.unshift(1000)
 console.log("added value to front of an array => "+ar);
 
-ar.splice(0,2)
-console.log("remove 0-2 indexed numbers => "+ar);
+ar.splice(2,2)
+console.log("remove start from index 2 and delete 2 values => "+ar);
 
 
 //######### Extra #########
