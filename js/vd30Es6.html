@@ -18,20 +18,50 @@
 
     <script>
         //default function arguments
-        function sum(a=10,b=20){
-            return a+b;
-        }console.log(sum(20,11));
+        // function sum(a=10,b=20){
+        //     return a+b;
+        // }console.log(sum(20,11));
 
         //spread operator ...
         function sum(...c){
             var s=0;
             console.log(c);//a will be an array
             c.forEach((item)=>{//for array sum
-                s+=item;
+                s+=item;        //this function can also write like :c.forEach(item=>s=s+item);
             })
             return s;
         }
-        console.log(s);
+        console.log(sum(2,3,5));
+
+          //spread operator can be use as ultta
+        function add(a,b,c){
+          console.log(a+b+c);
+        }
+        var vr=[20,30,60];
+        add(...vr)
+
+        //short hand operater
+        var name = "nandu";
+        var age = "24";
+        // var data={
+        //   name:name,
+        //   age:age
+        // }//indted of this
+        var data={name,age};//short hand operater
+        console.log(data);
+        
+        var i=1;
+        var ob={
+          "name":"nandu",
+          ["mark"+i]:10  //it will be saved as mark1
+        }
+        console.log(ob);
+
+        //array matching
+        var ar=[1,2,3];
+        var abc = ar;
+        console.log(abc);
+
     </script>
   </body>
 </html>
