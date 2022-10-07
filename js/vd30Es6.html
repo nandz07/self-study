@@ -61,7 +61,85 @@
         var ar=[1,2,3];
         var abc = ar;
         console.log(abc);
+        //or
+        var [g,h,i]=ar;
+        console.log(g);
+        console.log(h);
+        console.log(i);
 
+        //set
+
+        const letters = new Set(["a","b","c","c"]);
+        console.log(letters);//normal
+
+        var fruits = new Set();//duplicate value will not be considered
+        fruits.add("banana").add("apple").add("grapes");
+        fruits.delete("banana");
+        console.log(fruits);
+        fruits.forEach((i)=>console.log(i))
+
+        //normal local class or oops in js be like
+        function Student(){
+          var name  = ""
+          var age   = ""
+          this.setdata=(name,age)=>{
+              this.name=name;
+              this.age=age;
+          }
+        }
+
+        var ob1= new Student();
+        ob1.setdata("appu","20");
+        console.log(ob1.name);
+        
+        var ob2= new Student();
+        ob2.setdata("aleena","20");
+        console.log(ob2.name);
+
+        //class in Es6
+        class employe{
+
+          constructor(){
+            console.log("constructor will run by default");
+          }
+          setdata(name,age){
+            this.name=name
+            this.age=age
+          }
+          getdata(){
+            return `Name:${this.name} Age:${this.age}`
+          }
+        }
+
+        var em1= new employe();
+        em1.setdata("nandakumar","24");
+        console.log(em1.getdata());
+
+        //self practice:create a class about admin
+
+        class Admin{
+          constructor(){
+
+          }
+          setdata(name,age){
+            this.name=name;
+            this.age=age;
+          }
+          getdata(){
+            return `Name of admin is ${this.name} and age is ${this.age}`
+          }
+        }
+        var adm1=new Admin();
+        adm1.setdata("nandu","23");
+        console.log(adm1.getdata());
+        
+
+        class childclass extends employe{
+
+        }
+        var ob3= new childclass()
+        ob3.setdata("mahshoo","23");
+        console.log(ob3.getdata());
     </script>
   </body>
 </html>
