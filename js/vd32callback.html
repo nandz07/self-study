@@ -20,15 +20,25 @@
 
 
 <script>
-    function a(callback){
-        console.log("insid function a");
-        callback();
+    // function a(callback){
+    //     console.log("insid function a");
+    //     callback();
+    // }
+    // function b(){
+    //     console.log("inside function b");
+    // }
+    // //a(b);
+    // a(()=>console.log("test function"))
+
+    const post =[
+        {id:1,title:"introduction"},
+        {id:2,title:"chapter 1"}
+    ]
+    const getpost =()=>{
+        setTimeout(() => {
+            
+        }, 1000);
     }
-    function b(){
-        console.log("inside function b");
-    }
-    //a(b);
-    a(()=>console.log("test function"))
     
 </script>
 
