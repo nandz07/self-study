@@ -34,6 +34,7 @@ font-style: italic; */
 
 
 <script>
+    //+ ======== callback ++++++++++++++
     // function a(callback){
     //     console.log("insid function a");
     //     callback();
@@ -44,6 +45,39 @@ font-style: italic; */
     // //a(b);
     // a(()=>console.log("test function"))
 
+    // const posts =[
+    //     {id:1,title:"introduction"},
+    //     {id:2,title:"chapter 1"}
+    // ]
+    // const getpost =()=>{
+    //     let lis=''
+    //     setTimeout(() => {
+    //         posts.forEach(posts=>{
+    //             lis+=`<li>${posts.id}-${posts.title}</li>`
+    //         })
+    //         document.getElementById("list").innerHTML=lis
+    //     }, 1000);
+        
+    // }
+    // const setpost=(post,callback)=>{
+    //     setTimeout(() => {
+    //         posts.push(post);
+    //         callback();
+    //     }, 2000);
+    // }
+    // // getpost();
+    // setpost({id:3,title:"chapter 2"},getpost)
+
+    //++++++++++ promises +++++++++++
+    // let p1=new Promise((resolve,reject)=>{
+    //     reject();
+    // })
+    // p1.then(()=>{
+    //     console.log("sucess")
+    // }).catch(()=>{
+    //     console.log("reject")
+    // })
+    
     const posts =[
         {id:1,title:"introduction"},
         {id:2,title:"chapter 1"}
@@ -58,14 +92,39 @@ font-style: italic; */
         }, 1000);
         
     }
-    const setpost=(post,callback)=>{
-        setTimeout(() => {
+    
+    const setpost=(post)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(() => {
             posts.push(post);
-            callback();
+            let err=false;
+            if(err){
+                reject();
+            }else{
+                resolve();
+            }
         }, 2000);
+
+        });
+        
     }
     // getpost();
-    setpost({id:3,title:"chapter 2"},getpost)
+    setpost({id:3,title:"chapter 2"}).then(getpost).catch(()=>{
+        console.log("err")
+    })
+
+    p1= new Promise((rsolve,reject)=>{
+        rsolve("promise p1")
+    })
+    p2=10;
+    p3=Promise.resolve("another promise p3");
+
+    Promise.all([p1,p2,p3]).then((res)=>{
+        console.log(res);
+    })
+
+    // ++++++++++++++ async await ============================
+
     
     
 </script>
