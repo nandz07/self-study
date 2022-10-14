@@ -78,6 +78,53 @@ font-style: italic; */
     //     console.log("reject")
     // })
     
+    // const posts =[
+    //     {id:1,title:"introduction"},
+    //     {id:2,title:"chapter 1"}
+    // ]
+    // const getpost =()=>{
+    //     let lis=''
+    //     setTimeout(() => {
+    //         posts.forEach(posts=>{
+    //             lis+=`<li>${posts.id}-${posts.title}</li>`
+    //         })
+    //         document.getElementById("list").innerHTML=lis
+    //     }, 1000);
+        
+    // }
+    
+    // const setpost=(post)=>{
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //         posts.push(post);
+    //         let err=false;
+    //         if(err){
+    //             reject();
+    //         }else{
+    //             resolve();
+    //         }
+    //     }, 2000);
+
+    //     });
+        
+    // }
+    // // getpost();
+    // setpost({id:3,title:"chapter 2"}).then(getpost).catch(()=>{
+    //     console.log("err")
+    // })
+
+    // p1= new Promise((rsolve,reject)=>{
+    //     rsolve("promise p1")
+    // })
+    // p2=10;
+    // p3=Promise.resolve("another promise p3");
+
+    // Promise.all([p1,p2,p3]).then((res)=>{
+    //     console.log(res);
+    // })
+
+    // ++++++++++++++ async await ============================
+
     const posts =[
         {id:1,title:"introduction"},
         {id:2,title:"chapter 1"}
@@ -109,23 +156,16 @@ font-style: italic; */
         
     }
     // getpost();
-    setpost({id:3,title:"chapter 2"}).then(getpost).catch(()=>{
-        console.log("err")
-    })
-
-    p1= new Promise((rsolve,reject)=>{
-        rsolve("promise p1")
-    })
-    p2=10;
-    p3=Promise.resolve("another promise p3");
-
-    Promise.all([p1,p2,p3]).then((res)=>{
-        console.log(res);
-    })
-
-    // ++++++++++++++ async await ============================
-
+    // setpost({id:3,title:"chapter 2"}).then(getpost).catch(()=>{
+    //     console.log("err")
+    // })
+    async function triger(){
+        await setpost({id:3,title:"chapter 2"});
+        getpost();// after complete of await  next will exicute
     
+    }
+    triger();
+//async more simle than promise
     
 </script>
 
