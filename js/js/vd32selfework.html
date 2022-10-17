@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>vd32selfwork</title>
+    <style>
+        * {
+
+text-align: center;
+color: blue;
+font-family: Arial, Helvetica, sans-serif;
+font-size: larger;
+font-display: none;
+font-style: italic;
+
+}
+    </style>
+</head>
+
+<body>
+    <div id="list"></div>
+    
+   
+     
+    <h2>JavaScript async / await</h2>
+
+    <p id="demo"></p>
+
+
+
+<script>
+    //+ ======== callback ++++++++++++++
+
+    // const post=[
+    //     {id:1,name:"nandakumar"},
+    //     {id:2,name:"appu"}
+    // ]
+    // var getpost=()=>{
+    //     var lis='';
+    //     setTimeout(() => {
+    //         post.forEach(item=>{
+    //             lis+=`<li >Roll number ${item.id} is ${item.name}</li>`;
+    //         })
+    //         console.log(lis);
+    //          //document.getElementById("list").innerHTML=lis
+    //         $("#list").html(lis);
+    //         $( "#list" ).css( "border", "3px solid red" );
+    //     }, 1000);
+
+
+    // }
+
+    // var setpost=(newPost,callback)=>{
+    //     setTimeout(() => {
+    //         post.push(newPost)
+    //         callback();
+    //     }, 2000);
+        
+    // }
+    // // getpost();
+    // setpost({id:3,name:"manaf"},getpost);
+
+    //done,->promise .......................
+
+    // let p1 =new Promise((resolve,reject)=>{
+    //     reject();
+    // })
+    // p1.then(()=>{
+    //     console.log("resolve")})
+    //     .catch(()=>{
+    //     console.log("reject")})
+
+    // const post =[
+    //     {id:1,title:"chapter 1"},
+    //     {id:2,title:"hello world"}
+    // ]
+    // var getpost=()=>{
+        
+    //         setTimeout(() => {
+    //             ls=``;
+    //             post.forEach(element => {
+    //                 ls+=`<li>${element.id} - ${element.title}</li>`
+    //             });
+    //             $('#list').html(ls);
+    //         }, 1000);
+        
+    // }
+    // // getpost();
+    // var setpost=(element)=>{
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //             post.push(element);
+    //             let err=false
+    //             if(err){
+    //                 reject();
+    //             }else{
+    //                 resolve();
+    //             }
+    //         }, 2000);
+    //     })
+    // }
+    // setpost({id:3,title:"our family"}).then(getpost).catch(()=>{
+    //     console.log("error")
+    // })
+
+    //========== async await =============
+
+    var post=[
+        {id:1,name:"koran"},
+        {id:2,name:"karuthamma"}
+    ]
+    var getpost=(post)=>{
+        setTimeout(() => {
+            li=``;
+            post.forEach(element => {
+                li+=`<li>${element.id}-${element.name}</li>`
+            });
+            $("#list").html(li);
+        }, 1000);
+    }
+    var setpost=(element)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+            post.push(element);
+            err=false
+            if(err){
+                reject
+            }else{
+                resolve();
+            }
+        },3000)
+        })
+       
+    }
+    
+    
+    async function trigger(){
+        await setpost({id:3,name:"chirurtha"});
+         getpost(post);
+    }
+     trigger()
+</script>
+<script>
+    function myDisplayer(some) {
+      document.getElementById("demo").innerHTML = some;
+    }
+    
+    async function myFunction() {return "Hello";}
+    
+    myFunction().then(
+      function(value) {myDisplayer(value);}
+      
+    );</script>
+
+</body>
+
+</html>
