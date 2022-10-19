@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        
+        {
+            "type": "pwa-chrome",
+            "name": "http://localhost/self-study/js/33eventloop",
+            "request": "launch",
+            "url": "http://localhost/self-study/js/33eventloop"
+        }
+    ]
+}
