@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner {
+    
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(home.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+.content{
+    height: 100vh;
+    width: 100%;
+    
+}
+/* .banner {
+   
+    
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+.logo{
+    width: 120px;
+}
