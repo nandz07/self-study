@@ -6,16 +6,16 @@
 .banner {
     
     background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(home.jpg);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    /* background-size: auto;
+    background-repeat: no-repeat; */
+    background-size: 10vh 100%;
     
 }
-.content{
+/* .content{
     height: 100vh;
     width: 100%;
     
-}
+} */
 /* .banner {
    
     
