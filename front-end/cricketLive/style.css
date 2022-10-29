@@ -72,10 +72,37 @@
     /* margin-top: 15px; */
     margin: 15px 0;
 }
-.video .highlights img
-{
-    
+/* -----------------------------------
+        next session
+-----------------------------------*/
+
+.video_section .highlights {
+    display: flex;
+    padding: 30px 15px;
+    overflow-x: auto;
+}
+
+.video_section .highlights .single_vd {
+    position: relative;
+    margin-right: 15px;
+}
+
+.video_section .highlights .single_vd img
+{ 
     height: 200px;
     width: 324px;
-
+    border-radius: 15px;
+}
+.video_section .highlights .single_vd div {
+    position: absolute;
+    bottom: 3px;
+    color: white;
+    padding-left: 20px;
+    background: rgb(0 0 0 / 23%);
+    left: 0px;
+    right: 0px;
+    text-align: left;
+    padding: 10px 0px 10px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
