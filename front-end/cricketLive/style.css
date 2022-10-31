@@ -106,3 +106,16 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+/*-------------comment section----------- */
+
+.comment_section .list_row ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 20px; */
+}
+.comment_section .list_row ul li
+{
+    padding: 20px;
+}
