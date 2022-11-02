@@ -14,7 +14,7 @@
 
     <style>
         div:after {
-            content: attr(data-text);
+            content: attr(value);
             color: red;
         }
     </style>
@@ -22,7 +22,7 @@
 
 <body>
     <h1>Hello, world!</h1>
-    <div data-text="0">Test</div>
+    <div value="0">Test</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -37,7 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
     <script>
-    $('div').attr('data-text', '1');
+    $('div').attr('value', '1');
     
     </script>
 </body>
