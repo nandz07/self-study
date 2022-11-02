@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div::after {
+            content: attr(data-text);
+            color: red;
+        }
+
+        a {
+            /* color: red; */
+            text-decoration: none;
+        }
+
+        a::before {
+            content: '🔗';
+        }
+
+        h3 {
+            color: green;
+        }
+
+        h3::before {
+            content: var(--check-hello, '🔗');
+            color: var(--check-hi, black);
+        }
+
+        .local-link::before {
+            /* content: url('../../media/examples/firefox-logo.svg'); */
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+
+        /* ------------------ */
+        .checkmark {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: var(--check-primary, #61d345);
+            position: relative;
+            transform: rotate(45deg);
+        }
+
+        .checkmark::after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            border-right: 2px solid;
+            border-bottom: 2px solid;
+            border-color: var(--check-secondary, #fff);
+            bottom: 6px;
+            left: 6px;
+            height: 10px;
+            width: 6px;
+        }
+
+
+        /* below styles are only for representation purpose */
+        .container {
+            margin: 150px 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: aqua;
+        }
+
+        h1::before {
+            content: attr(data-text);
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Learning resources for web developers can be found all over the internet. Try out <a
+            href="https://web.dev/">web.dev</a>, <a href="https://www.w3schools.com/">w3schools.com</a> or our <a
+            href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.</p>
+    <h3>hi</h3>
+    <!-- <h1 data-text="🔗">hello</h1> -->
+    <div data-text="0">Test</div>
+
+    <div class="container">
+        <span class="checkmark"></span>
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+</body>
+<script>
+
+    // a.style["color"] = "yellow";
+
+    // document.body.a.style.color = "red";
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script>
+    const element = document.querySelector(".checkmark");
+    var hi = document.querySelector("h3");
+    var h1 = document.querySelector("h1");
+    console.log(hi)
+
+    function changeColor() {
+        // 2. Modify its custom css properties
+        element.style.setProperty("--check-primary", "red");
+        element.style.setProperty("--check-secondary", "yellow");
+        hi.style.setProperty('--check-hi', "red ")
+        hi.style.setProperty('--check-hello', "1")
+        $('div').attr('data-text', 1);
+    }</script>
+
+</html>
