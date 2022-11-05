@@ -1,31 +1,67 @@
-.title:hover{ /*psudoselector*/
+.title:hover {
+    /*psudoselector*/
     color: red;
 }
-.subtitle{
+
+.subtitle {
     color: blue;
 }
-li:nth-child(2){/*last-child , first-child*/
-    color:green;
-}
-li:only-child{/* if there is only one child*/
-    color:purple;
-}
-#google-link:link{
+
+li:nth-child(2) {
+    /*last-child , first-child*/
     color: green;
 }
-#google-link:visited{
-    color:red;
+
+li:only-child {
+    /* if there is only one child*/
+    color: purple;
 }
+
+#google-link:link {
+    color: green;
+}
+
+#google-link:visited {
+    color: red;
+}
+
 /* advanced selectors */
-h3 + h4 { /*every h4 tag that follow h3*/
+h3+h4 {
+    /*every h4 tag that follow h3*/
     color: rosybrown;
 }
-textarea ~ button{/*under the same parent */
+
+textarea~button {
+    /*under the same parent */
     color: brown;
 }
-ul > li{/* li which is direct child of ul*/
+
+ul>li {
+    /* li which is direct child of ul*/
     color: blueviolet;
 }
-ul li { /*li which follow under ul if it is child of ol also*/
+
+ul li {
+    /*li which follow under ul if it is child of ol also*/
     color: red;
+}
+
+/* atribute selector */
+
+/* for single image */
+/* img[src='image/smile.jpg']{
+    width: 100px;
+} */
+
+/* for multiple image with common folder */
+
+img[src^='image/']{
+    width: 100px;
+    border: 2px solid violet ;
+}
+/* we can use img[src*='image/'] and apply for where ever it is */
+
+/* multiple class */
+h2[class~='new-class']{
+    background-color: green;
 }
