@@ -1,0 +1,29 @@
+body {
+    background:linear-gradient(rgb(255, 255, 224),rgba(255, 255, 224, 0.4)) ;
+}
+
+#title {
+    color: rgb(255, 165, 0)
+}
+
+.sub-title {
+    color: rgb(255, 215, 0)
+}
+
+.para {
+    color: rgb(255, 140, 0)
+}
+
+.bg-image {
+    height: 500px;
+    width: 700px;
+    /* background: url('image/sad.jpg'); */
+    /* background: linear-gradient(to right, rgb(0, 255, 0), rgba(0, 255, 0, 0)); */
+    /* background: linear-gradient(to bottom right,rgb(0,255,0),rgba(0,255,0,0)); */
+    /* background: linear-gradient(to top, rgb(0, 255, 0), rgba(0, 255, 0, 0)); */
+    /* background: linear-gradient(90deg,rgb(0,255,0),rgba(0,255,0,0)); */
+    background: radial-gradient(circle,rgb(0,255,127)10%,rgb(250, 121, 0)20%,rgb(0,250,154)60%);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+}
