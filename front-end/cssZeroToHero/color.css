@@ -1,5 +1,6 @@
 body {
     background:linear-gradient(rgb(255, 255, 224),rgba(255, 255, 224, 0.4)) ;
+    /* font-size: 2c; */
 }
 
 #title {
@@ -26,4 +27,16 @@ body {
     /* background-size: cover; */
     background-repeat: no-repeat;
     /* background-color: aqua; */
+}
+/* units */
+.unit-parent{
+    height: 300px;
+    width: 500px;
+    background: linear-gradient(to right, rgb(229, 255, 0),rgb(21, 255, 0));
+}
+.unit-child{
+    background-image: url('image/sample.jpg');
+    background-color: linear-gradient(to right, rgb(255, 115, 0),rgb(25, 0, 255));
+    height: 100%;
+    width: 100%;
 }
