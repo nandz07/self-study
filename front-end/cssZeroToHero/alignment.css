@@ -1,0 +1,120 @@
+body {
+    background:linear-gradient(rgb(255, 255, 224),rgba(255, 255, 224, 0.4)) ;
+    /* font-size: 2c; */
+    /* text-transform:capitalize; */
+    /* text-transform:lowercase; */
+
+    /* text manipulation */
+    /* text-transform:uppercase; */
+    /* text-align: center; */
+    text-align: justify;  /*for classic align like research papers*/
+    font-size: 1.15em;
+    /* font-style: italic; */
+    font-family: sans-serif;
+}
+
+#title {
+    font-weight:100;
+    color: rgb(255, 165, 0)
+}
+
+.sub-title {
+    /* font-family: 'Kolker Brush'; */
+    color: rgb(255, 215, 0)
+}
+
+.para {
+    color: rgb(255, 140, 0)
+}
+
+.bg-image {
+    height: 500px;
+    width: 700px;
+    /* background: url('image/sad.jpg'); */
+    /* background: linear-gradient(to right, rgb(0, 255, 0), rgba(0, 255, 0, 0)); */
+    /* background: linear-gradient(to bottom right,rgb(0,255,0),rgba(0,255,0,0)); */
+    /* background: linear-gradient(to top, rgb(0, 255, 0), rgba(0, 255, 0, 0)); */
+    /* background: linear-gradient(90deg,rgb(0,255,0),rgba(0,255,0,0)); */
+    background: radial-gradient(circle,rgb(0,255,127)10%,rgb(250, 121, 0)20%,rgb(0,250,154)60%);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    /* border: size style color; */
+    /* style- dotted dashed solid double */
+    border: 2px dotted red;
+    /* =================== float ===================*/
+    /* float: right; */
+    
+}
+/* units */
+.unit-parent{
+    height: 300px;
+    width: 500px;
+    background: linear-gradient(to right, rgb(229, 255, 0),rgb(21, 255, 0));
+}
+.unit-child{
+    background-image: url('image/sample.jpg');
+    background-color: linear-gradient(to right, rgb(255, 115, 0),rgb(25, 0, 255));
+    height: 100%;
+    width: 100%;
+}
+/* text manipulation */
+.link{
+    /* text-decoration: line-through; */
+    /* text-decoration: overline; */
+    border: 10px double green ;
+    text-decoration: none;
+    float: right;
+    margin: 10px 50px;
+    padding: 10px;
+}
+#first-image{
+    height: 300px;
+    width: 60%;
+    border: 2px solid red;
+    /* padding: 100px ; */
+    /* margin: 20px; */
+    /* padding: 20px 10px 20px 0px; */
+    /* margin: 20px 10px 20px 0px; */
+    margin-left: 10px;
+    float: right;
+}
+.to-hide{
+    display: none;
+}
+
+/* ----------------- flex box ----------------- */
+.container{
+    background-color: yellow;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: baseline; */
+    /* if one of element style changed avery thing will be at same line  
+    like-><div class="container-item" style="line-height:100px;">B</div>*/
+    justify-content: center;
+    align-items: center;
+
+}
+.container-item {
+    background: green;
+    color: white;
+    margin: 10px;
+    width: 70px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    justify-content: center;/* for make text at center */
+    /* padding: 10px 30px; */
+}

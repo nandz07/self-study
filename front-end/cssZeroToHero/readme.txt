@@ -31,6 +31,17 @@ flex-direction: row-reverse;
     justify-content: space-around;
         justify-content: center;
 
+we should not use flex wrap
+
+flex-grow: 1; ->how much does it need to be grow compare to other elements in a row
+flex-shrink: 3;->how much does it need to shrink while responsive compare to others
+flex-basis: 100px; 
+
+above three properties can be write as flex : grow shrink basis ->flex:1 1 100px
+
+align-self:center;
+align-self:flex-start;
+align-self:flex-end;
 
 
 
