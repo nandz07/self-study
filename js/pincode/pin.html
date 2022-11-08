@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+
+    <div id="page-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4" id="form-sec">
+                    <form>
+                        <div class="form-group">
+                            <label for="text">Enter Indian Pincode</label>
+                            <input type="text" class="form-control" id="text" placeholder="Enter Pincode" maxlength="6"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                        </div>
+                        <button id="submit" type="button" class="btn btn-default btn-lg btn-block">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <div id="total-msg"></div>
+    <div id="htmlView">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="padding: 0;">
+                    <div id="mkslider">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+    function searchPin() {
+      let pin = document.getElementById("text").value;
+      $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+        createHTML(data);
+      })
+      function createHTML(data) {
+        var htmlElements = " ";
+        var msg = "";
+        msg += '<div id="msg">' + data[0].Message + '<span id="close">X</span></div>'
+        if (data[0].PostOffice && data[0].PostOffice.length) {
+          for (var i = 0; i < data[0].PostOffice.length; i++) {
+            if (data[0].PostOffice.length > 3) {
+              document.getElementById("mkslider").classList.add("sliders");
+            }
+            else {
+              document.getElementById("mkslider").removeAttribute("class");
+            }
+            htmlElements += '<div class="col-sm-4"><div class="card"><div class="list-group"><h4>' + data[0].PostOffice[i].Name + '<small class="pull-right underline">' + data[0].PostOffice[i].Block + '</small></h4><p>District: <span class="pull-right">' + data[0].PostOffice[i].District + '</span></p><p>PostOffice :<span class="pull-right">' + data[0].PostOffice[i].State + '</span></p></div></div></div></div>'
+          }
+        }
+        else {
+          alert('Enter Valid pincode');
+        }
+        var htmlView = document.getElementById("mkslider");
+        htmlView.innerHTML = htmlElements;
+        var msgView = document.getElementById("total-msg");
+        msgView.innerHTML = msg;
+        createSlider();
+      }
+      setTimeout(function () {
+        $('#close').trigger('click');
+      }, 3000);
+    }
+
+    // $(document).on("click", '#close', function () {
+    //   $('#total-msg').remove();
+    // });
+
+    // function createSlider() {
+    //   $('.sliders').slick({
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 300,
+    //     slidesToShow: 3,
+    //     arrows: true,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     responsive: [
+    //       {
+    //         breakpoint: 600,
+    //         settings: {
+    //           slidesToShow: 2,
+    //           slidesToScroll: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 480,
+    //         settings: {
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1
+    //         }
+    //       }
+    //     ]
+    //   });
+    // }
+    document.getElementById("submit").addEventListener("click", searchPin);
+  });
+    </script>
+
+
+</body>
+
+</html>
