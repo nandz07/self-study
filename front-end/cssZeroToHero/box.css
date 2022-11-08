@@ -82,3 +82,26 @@ body {
 .to-hide{
     display: none;
 }
+
+/* ----------------- flex box ----------------- */
+.container{
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+}
+.container.item {
+    background: green;
+    color: white;
+    margin: 10px;
+    width: 70px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    justify-content: center;/* for make text at center */
+    /* padding: 10px 30px; */
+}

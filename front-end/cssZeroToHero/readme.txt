@@ -3,9 +3,35 @@ HTML and CSS Tutorials
 https://youtu.be/1Rs2ND1ryYc
 Channel:freecodecamp.org
 
+new words
+
 id="contact-us" :some-some is standerd form of id
 
 units:
     pixels:px
     percentage;%
+
+text-align: justify;  /*for classic align like research papers*/
+
+background: linear-gradient(to right, rgb(0, 255, 0), rgba(0, 255, 0, 0)); 
+
+background: radial-gradient(circle,rgb(0,255,127)10%,rgb(250, 121, 0)20%,rgb(0,250,154)60%);
+
+float: right;
+
+line-height: 50px; -> It's commonly used to set the distance between lines of text.
+
+-------------------flex box-----------------
+
+display:flex
+flex-direction:column;
+flex-direction: column-reverse; 
+flex-direction: row-reverse;
+
+    justify-content: space-around;
+        justify-content: center;
+
+
+
+
     
