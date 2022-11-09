@@ -19,7 +19,7 @@ background: radial-gradient(circle,rgb(0,255,127)10%,rgb(250, 121, 0)20%,rgb(0,2
 
 float: right;
 
-line-height: 50px; -> It's commonly used to set the distance between lines of text.
+*->  line-height: 50px; -> It's commonly used to set the distance between lines of text.
 
 -------------------flex box-----------------
 
@@ -42,6 +42,16 @@ above three properties can be write as flex : grow shrink basis ->flex:1 1 100px
 align-self:center;
 align-self:flex-start;
 align-self:flex-end;
+
+-------------------- grid --------------------------
+
+ display: grid;
+    /* grid-template-columns: 10px 50px 10px;
+    grid-template-rows: 50px 250px; */
+    /* grid-template-columns: auto 100px auto;
+    grid-template-rows: auto auto; */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
 
 
 
