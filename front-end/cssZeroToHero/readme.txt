@@ -53,6 +53,9 @@ align-self:flex-end;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
 
+--------------- animation -------------
+transition: property duration style delay;
+
 
 
     
