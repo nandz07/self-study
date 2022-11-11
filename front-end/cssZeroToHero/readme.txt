@@ -56,6 +56,40 @@ align-self:flex-end;
 --------------- animation -------------
 transition: property duration style delay;
 
+    /* transform: translate(100px,0px); */
+    /* transform: rotate(360deg); */
+    /* transform: skewX(45deg); */
+    transform: matrix(1,0.45,0.45,1,100,50);
+
+#about-me{
+    animation-name:red-to-black;
+    animation-duration:10s; ;
+}
+
+    ⌄---------------- keyframes ----------------------
+    
+    @keyframes red-to-black{
+        0%{
+            /* background:red ; */
+            /* transform: translate(0px,0px); */
+            color: red;
+            rotate: 10deg;
+        }
+        50%{
+            /* background:yellow ;
+            transform: translate(10px,10px); */
+            color: yellow;
+        }
+        75%{
+            color: green;
+        }
+        100%{
+            /* background:black ;
+            transform: translate(20px,20px); */
+            color: rgb(255, 215, 0);
+        }
+    }
+
 
 
     

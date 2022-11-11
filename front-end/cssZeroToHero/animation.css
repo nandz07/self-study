@@ -177,4 +177,44 @@ body {
     background: white;
     border: 1px solid rgb(49, 205, 147);
     /* padding: 10px; */
+    /* transform: translate(100px,0px); */
+    /* transform: rotate(360deg); */
+    /* transform: skewX(45deg); */
+    /* transform: matrix(1,0.45,0.45,1,100,50); */
 }
+
+#about-me{
+    /* animation-name:red-to-black;
+    animation-duration:2s; 
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); */
+    /* animation-iteration-count: infinite; */
+    /* animation-iteration-count: 2;
+    animation-direction: reverse; */
+    -webkit-animation: red-to-black 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) 2 reverse ;
+    -moz-animation: red-to-black 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) 2 reverse ;
+    -o-animation: red-to-black 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) 2 reverse ;
+}
+
+/* key frames */
+    @keyframes red-to-black{
+        0%{
+            /* background:red ; */
+            /* transform: translate(0px,0px); */
+            color: red;
+            /* rotate: -5deg; */
+            transform: rotate(360deg);
+        }
+        50%{
+            /* background:yellow ;
+            transform: translate(10px,10px); */
+            color: yellow;
+        }
+        75%{
+            color: green;
+        }
+        100%{
+            /* background:black ;
+            transform: translate(20px,20px); */
+            color: rgb(255, 215, 0);
+        }
+    }
