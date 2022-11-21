@@ -11,6 +11,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Hello, world!</title>
+    <style>
+        .btn{
+            margin-top: 500px;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,6 +39,11 @@
         <div id="div2">
         <input type="text">
         </div>
+    </div>
+    <div class="btn">
+        <button onclick="btnfunction()">
+            select 
+        </button>
     </div>
 
 
@@ -90,7 +100,13 @@ divQuery=document.querySelectorAll("#div1 > #div2 > input");
 console.log(divQuery);
 
 
-
+function btnfunction(){
+    alert("hai")
+    a=document.getElementById("name")
+    console.log(a)
+    document.getElementById("name").select();
+    // document.getElementById("#name").select();
+}
     </script>
 </body>
 
