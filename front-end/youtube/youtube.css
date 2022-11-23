@@ -1,0 +1,92 @@
+.youtube img {
+    height: 35px;
+    width: 35px;
+}
+
+section.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons img {
+    height: 20px;
+    width: 20px;
+}
+
+.mic img {
+    height: 20px;
+    width: 20px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.menu img {
+    height: 20px;
+    width: 20px;
+}
+
+.search img {
+    height: 14px;
+    width: 20px;
+}
+
+.menu button {
+    border: none;
+    background: white;
+}
+
+.search button {
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
+    background: white;
+    height: 24px;
+    border: solid 1px
+}
+
+.logo div {
+    display: flex;
+    align-items: center;
+}
+
+.logo div span {
+    font-family: fantasy !important;
+}
+.logo div .logo-name p {
+    font-size: 9px;
+}
+input[type="text"] {
+    border: solid 1px;
+    width: 270px;
+    height: 20px;
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.search .mic{
+    padding-top: 3px;
+    padding-left: 10px;
+}
+.logo {
+    display: flex;
+}
+.logo .youtube{
+    padding-left: 20px;
+}
+.icons {
+    display: flex;
+}
+.icons .video{
+    margin-right: 30px;
+}
+.icons .notification{
+    margin-right: 30px;
+}
+.icons .user{
+    margin-right: 30px;
+}
