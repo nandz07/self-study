@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<!-- Given is an array n with integers. Return true if it contains more four than zero. -->
+<script>
+// self
+function more4than0(n) {
+  var count4=0,count0=0,a;
+  for(i=0;i<n.length;i++){
+    if(n[i]==4){
+      count4++;
+    }else if(n[i]==0){
+      count0++;
+    }
+  }
+  if(count4>count0){
+    a=true;
+  }else{
+    a=false;
+  }
+  return(a);
+}
+</script>
+<script>
+  // online
+function more4than0a(n) {
+    const fours = n.filter(x => x === 4).length
+    const zeros = n.filter(x => x === 0).length
+    console.log(fours)
+    console.log(zeros)
+    return fours > zeros
+  }
+</script>
+<script>
+  // filter
+  const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+</script>

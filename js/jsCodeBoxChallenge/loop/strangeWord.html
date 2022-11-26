@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Given is a word word. Run through the word and merge every second letter into a new word.
+</body>
+
+</html>
+<script>
+    // self
+    function strangeWord1(word) {
+        let element = '';
+        for (let i = 0; i < word.length; i++) {
+            if (i % 2 == 0) {
+                element += word[i];
+            }
+        }
+        return element;
+
+    }
+</script>
+<script>
+    function strangeWord(word) {
+	let sp = word.split('');
+    // console.log(sp)
+	let filteredWord = sp.filter(function (val, key){
+        // console.log(val)
+		return key%2 ==0;
+	})
+    console.log(filteredWord)
+	return filteredWord.join('');
+    
+}
+</script>

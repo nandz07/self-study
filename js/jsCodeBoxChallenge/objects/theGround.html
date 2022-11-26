@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Given is an object obj each with two properties (name & category) of type String. Return the value of the property
+    with the longer string. If both are of equal length, return the value of the name property.
+</body>
+
+</html>
+<script>
+    // self
+    function theGround1(obj) {
+        if (obj.name.length >= obj.category.length) {
+            return obj.name
+        }
+        else {
+            return obj.category
+        }
+    }
+</script>
+<script>
+    // online
+    function theGround(obj) {
+        // if (obj.name.length === obj.category.length) {
+        //     return obj.name
+        // }
+
+        return obj.name.length >=obj.category.length ? obj.name : obj.category
+    }
+</script>
